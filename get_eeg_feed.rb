@@ -1,3 +1,5 @@
+# DOCUMENTATION http://artoo.io/documentation/platforms/neurosky/
+
 require 'artoo'
 
 connection :neurosky, :adaptor => :neurosky, :port => '/dev/rfcomm0'
