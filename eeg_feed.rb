@@ -11,6 +11,6 @@ def handle_eeg(sender, data)
 end
 
 work do
-  puts "Scanning..."
+  puts "SCANNING EEG..."
   on neurosky, :eeg => :handle_eeg
 end
