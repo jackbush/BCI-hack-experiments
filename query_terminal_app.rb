@@ -7,9 +7,11 @@ def handle_eeg(sender, data)
   puts "#{sender} | #{data}"
 end
 
-work do
-  puts "SCANNING..."
-  on neurosky, :eeg => :handle_eeg
+def get_eeg
+  work do
+    puts "SCANNING..."
+    on neurosky, :eeg => :handle_eeg
+  end
 end
 
 def menu
@@ -26,11 +28,11 @@ while response != "Q"
 
   case response
   when '1'
-    eeg
+    get_eeg
   when '2'
-    attention
+    get_attention
   when '3'
-    meditation
+    get_meditation
   else
     menu
   end
