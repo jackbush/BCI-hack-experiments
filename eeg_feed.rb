@@ -8,7 +8,7 @@ device :neurosky, :driver => :neurosky, :interval => 0.1
 api :host => '127.0.0.1', :port => '9000'
 
 def handle_eeg(sender, data)
-  puts data.to_json
+  puts data
 end
 
 work do
