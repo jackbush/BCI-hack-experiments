@@ -7,10 +7,31 @@ def handle_eeg(sender, data)
   puts "#{sender} | #{data}"
 end
 
-def get_eeg
+# def get_eeg
+#   work do
+#     puts "SCANNING..."
+#     on neurosky, :eeg => :handle_eeg
+#   end
+# end
+
+# def get_attention
+#   work do
+#     puts "SCANNING..."
+#     on neurosky, :attention => :handle_eeg
+#   end
+# end
+
+# def get_meditation
+#   work do
+#     puts "SCANNING..."
+#     on neurosky, :meditation => :handle_eeg
+#   end
+# end
+
+def results_feed (selection)
+  type = selection.to_sym
   work do
-    puts "SCANNING..."
-    on neurosky, :eeg => :handle_eeg
+    on neurosky, :type => :handle_eeg
   end
 end
 
@@ -28,11 +49,14 @@ while response != "Q"
 
   case response
   when '1'
-    get_eeg
+    # get_eeg
+    results_feed(eeg)
   when '2'
-    get_attention
+    # get_attention
+    results_feed(attention)
   when '3'
-    get_meditation
+    # get_meditation
+    results_feed(meditation)
   else
     menu
   end
