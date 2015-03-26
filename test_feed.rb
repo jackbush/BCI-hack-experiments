@@ -10,7 +10,7 @@ end
 
 work do
   puts "SCANNING..."
-  on neurosky, :wave => :handle_eeg
+  on neurosky, :eeg => :handle_eeg
 end
 
 # attention(data)
