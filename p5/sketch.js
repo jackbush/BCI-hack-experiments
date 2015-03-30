@@ -1,7 +1,9 @@
 var x = 0;
 
 function setup() {
-  background(200);  
+  var eegCanvas = createCanvas(600, 400);
+  background(200);
+  eegCanvas.parent('eeg-canvas');
 }
 
 function draw() {
