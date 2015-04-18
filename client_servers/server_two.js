@@ -14,8 +14,6 @@ io.on('connect', function(socket){
   client.on('data',function(data) {
     socket.emit('eeg', data);
   });
-  // socket.on('event', function(data){});
-  // socket.on('disconnect', function(){});
 });
 
 server.listen(9876);
