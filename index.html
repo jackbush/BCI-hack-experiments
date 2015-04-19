@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EEG socket test</title>
+  <title>EEG client</title>
   <script src="/socket.io/socket.io.js"></script>
   <script>
     var socket = io.connect('http://localhost:9876');
-    // console.log(socket);
     socket.on('eeg', function(data) {
       console.log(data);
     });
   </script>
 </head>
 <body>
-  routing good.
+  RUNNING
 </body>
 </html>
