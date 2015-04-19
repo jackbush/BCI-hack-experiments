@@ -26,7 +26,7 @@ client.connect();
 
 io.on('connection', function (socket) {
   setInterval(function() { 
-    socket.emit('test', 'start');
+    socket.emit('test', {foo: 'bar'});
   }, 500);
   client.on('data',function(data) {
     socket.emit('eeg', data);
