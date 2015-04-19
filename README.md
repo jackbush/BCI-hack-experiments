@@ -16,9 +16,9 @@ $ node server.js
 
 ## What you get
 
-Once running, navigating to [localhost:9876/index.html](http://localhost:9876/index.html) will load a simple page. Opening the browser console will show the EEG data being served.
+Once running, navigating to [localhost:9876/index.html](http://localhost:9876/index.html) will load a simple example page listening to the socket. Opening the browser console will show the EEG data being received.
 
-The socket emits by default `test` and `eeg` objects. `test` emits `{foo : "bar"}` every 500ms; `eeg` emits a new EEG dataset every time the headset returns one.
+The socket emits by default `test` and `eeg` objects. `test` emits `{foo : "bar"}` every 500ms; `eeg` emits new EEG data objectss at 1Hz.
 
 ## Integration
 
