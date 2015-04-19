@@ -14,13 +14,9 @@ $ node server.js
 => served on localhost:9876
 ```
 
-## Debugging
-
-If you have a port conflift, it can fixed by trying another value at `server.js:6`.
-
 ## What you get
 
-Once running, navigating to (http://localhost:9876/index.html)[http://localhost:9876/index.html] will load a simple page. Opening the browser console will show the EEG data being served.
+Once running, navigating to [localhost:9876/index.html](http://localhost:9876/index.html) will load a simple page. Opening the browser console will show the EEG data being served.
 
 The socket emits by default `test` and `eeg` objects. `test` emits `{foo : "bar"}` every 500ms; `eeg` emits a new EEG dataset every time the headset returns one.
 
@@ -34,6 +30,12 @@ eegSocket.on('eeg', function(data) {
   console.log(data);
 });
 ```
+
+## Debugging
+
+If you have a port conflift, it can fixed by trying another value at `server.js:6`.
+
+---
 
 ## Terminal Printouts
 
