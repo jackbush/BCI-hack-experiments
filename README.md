@@ -1,4 +1,4 @@
-# Neurosky Data Forwarder
+# Neurosky Data Server
 
 Node.js server using websockets to forward data from a Neurosky EEG to be accessed by web apps such as [Mindflow](http://mindflow.jackbush.co/#!/).
  
