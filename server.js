@@ -27,7 +27,7 @@ var client = neurosky.createClient({
 
 client.connect();
 
-console.log('App connected to EEG:\n')
+console.log('\nApp connecting to EEG...')
 
 io.on('connection', function (socket) {
   setInterval(function() { 
